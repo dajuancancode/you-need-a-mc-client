@@ -1,0 +1,40 @@
+@import "../../sass/main.sass"
+
+.Navbar
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  flex-wrap: wrap
+  align-self: start
+  justify-self: center
+  &__logo
+    width: 128px
+  &__menuButton
+    padding: .04rem  1.2rem
+    font-size: 2rem
+    line-height: 1
+    background-color: transparent
+    border: 2px solid transparent
+    color: rgba(0,0,0,0.5)
+    border-color: rgba(0,0,0,0.3)
+    cursor: pointer
+    border-radius: .4rem
+  &__menuIcon
+    font-size: 1.066rem
+  &__navigation
+    flex-basis: 100%
+    margin-top: 1.5rem
+    visibility: hidden
+  &__nav
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+  &__navItem
+    margin-right: 1.5rem
+  &__navLink
+    color: #fff
+    transition: all 250ms ease-in-out
+    cursor: pointer
+    &:hover
+      border-bottom: 2px solid $accent-orange

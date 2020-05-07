@@ -1,0 +1,32 @@
+@import "../../sass/main.sass"
+.Header
+  height: 100vh
+  
+  &__background
+    background:  $primary-green
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 15%  27% 1fr
+    height: 75vh
+  &__content
+    text-align: center
+    align-self: center
+  &__span
+    position: relative
+    padding-bottom: 0.5rem
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0%
+      left: 0%
+      right: 0%
+      height: 0.5rem
+      border-radius: 5px
+      background-color: $accent-orange
+  &__heading
+    font-size: 3rem
+  &__info
+    color: #fff
+    padding-top: 1.0rem
+  &__img
+    justify-self: center
