@@ -1,16 +1,32 @@
 @import "../../sass/main.sass"
 .Header
   height: 100vh
-  
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  column-gap: 10px
+  grid-template-rows: 15% 25% 1fr 1fr
+
   &__background
     background:  $primary-green
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: 15%  27% 1fr
-    height: 75vh
+    grid-column: 1 / 5
+    grid-row: 1/ 4
   &__content
+    display: flex
+    flex-direction: column
     text-align: center
     align-self: center
+    grid-row: 2 / 3
+    grid-column: 1 / 5
+  &__btn
+    padding: 1.5rem 3.5rem
+    border: 3px solid $accent-orange
+    color: #ffffff
+    border-radius: 5px
+    background: transparent
+    margin: 10px
+    cursor: pointer
+  &__btn--attn
+    background: $accent-orange
   &__span
     position: relative
     padding-bottom: 0.5rem
@@ -26,7 +42,14 @@
   &__heading
     font-size: 3rem
   &__info
-    color: #fff
-    padding-top: 1.0rem
+    color: #fff 
+    padding: 1.5rem 0 1.5rem
+  &__imgContainer
+    height: 100%
+    width: 100%
+    grid-column: 2 / 4
+    grid-row: 3 / 5
+    display: flex
+    justify-content: center
   &__img
-    justify-self: center
+    height: 100%
