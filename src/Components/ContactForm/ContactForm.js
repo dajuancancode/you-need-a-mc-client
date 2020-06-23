@@ -78,7 +78,7 @@ const ContactForm = () => {
         />
         <MyTextInput
           classstyles={styles.Form__emailAddress}
-          label="Email Adress"
+          label="Email Address"
           name="email"
           type="email"
           placeholder="John@youneedamc.com"

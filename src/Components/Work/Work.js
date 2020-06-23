@@ -1,5 +1,4 @@
 import React from 'react'
-import { Player } from 'video-react'
 
 import Gallery from "../Gallery/Gallery"
 
@@ -16,10 +15,15 @@ const Work = () => {
   return(
     <div className={styles.Work}>
       <h1 className={styles.Work__title}>Work</h1>
-      <div className={styles.Work__video}>
-        <Player src={url} poster={LaWanda} playsInline/>
+      <div className={styles.Work__container}>
+        <div className={styles.Work__videoContainer}>
+          <video controls className={styles.Work__video} poster={LaWanda}>
+            <source src={url} type="video/mp4"></source>
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </div>
+        <Gallery />
       </div>
-      <Gallery />
     </div>
   )
 }

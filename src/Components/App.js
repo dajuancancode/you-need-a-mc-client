@@ -17,18 +17,18 @@ function App() {
         <Header />
       </Element>
       <Element name="services">
-        <Services />
+        <Services/>
       </Element>
       <Element name="about">
-        <About />
+      <About/>
       </Element>
       <Element name="work">
-        <Work />
+        <Work/>
       </Element>
       <Element name="contact">
-        <Contact />
+        <Contact/>
       </Element>
-      <Footer />
+      <Footer/>
     </>
   );
 }

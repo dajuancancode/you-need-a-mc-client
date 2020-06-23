@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from "./Gallery.module.sass"
+import "./temp.sass"
 
 const GalleryModal = ({isopen, onClick, name, src, picture}) => {
   if(isopen === false) return null
@@ -44,7 +45,7 @@ const Gallery = () => {
   return (
     <div className={styles.Gallery}>
       {imgUrls && imgUrls.map((img, index) => (
-        <div className={styles.Gallery__card} key={index}>
+        <div className={[styles.Gallery__card, `Gallery__card--${index}`].join(" ")} key={index}>
           <img src={img} alt={`number ${index}`}  className={styles.Gallery__img}/>
           <span className={[styles.Gallery__open, "far fa-expand-alt"].join(" ")} onClick={() => openModal(img)}></span>
         </div>
