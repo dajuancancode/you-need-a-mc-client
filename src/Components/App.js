@@ -1,5 +1,4 @@
 import React from 'react';
-import { Element } from 'react-scroll'
 
 import Header from "./Header/Header"
 import Services from "./Services/Services"
@@ -8,28 +7,19 @@ import Work from "./Work/Work"
 import Contact from "./Contact/Contact"
 import Footer from "./Footer/Footer"
 
+import styles from "./App.module.sass"
 
 
 function App() {
   return (
-    <>
-      <Element name="home">
-        <Header />
-      </Element>
-      <Element name="services">
-        <Services/>
-      </Element>
-      <Element name="about">
-      <About/>
-      </Element>
-      <Element name="work">
-        <Work/>
-      </Element>
-      <Element name="contact">
-        <Contact/>
-      </Element>
+    <div className={styles.App}>
+      <Header  id="home"/>
+      <Services id="services"/>
+      <About id="about"/>
+      <Work id="work"/>
+      <Contact id="contact"/>
       <Footer/>
-    </>
+    </div>
   );
 }
 

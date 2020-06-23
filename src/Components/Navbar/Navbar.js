@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll'
 import Burger from '@animated-burgers/burger-squeeze'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 import styles from './Navbar.module.sass';
@@ -17,32 +16,30 @@ const Navabar = props => {
     setStatus(!status)
   }
 
-  const scrollToTop = () => {
-    scroll.scrollToBottom();
-  }
-
   return (
     <nav className={styles.Navbar}>
-      <img src={logo} className={styles.Navbar__logo} alt="You Need A MC logo" onClick={scrollToTop}/>
+      <div className={styles.Navbar__logoContainer}>
+        <img src={logo} className={styles.Navbar__logo} alt="You Need A MC logo"/>
+      </div>
       <button className={styles.Navbar__menuButton}>
         <Burger className={styles.Navbar__menuIcon} isOpen={status} onClick={handleClick}/>
       </button>
       <div className={styles.Navbar__navigation} id="navigation">
         <ul className={styles.Navbar__nav}>
         <li className={styles.Navbar__navItem}>
-            <Link className={styles.Navbar__navLink} activeClass="" to="home" spy={true} smooth={true} duration={500} offset={-70}>Home</Link>
+            <a className={styles.Navbar__navLink} href="#home">Home</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <Link className={styles.Navbar__navLink} activeClass="" to="services" spy={true} smooth={true} duration={500} offset={-70}>Services</Link>
+            <a className={styles.Navbar__navLink} href="#services">Services</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <Link className={styles.Navbar__navLink}  activeClass="" to="about" spy={true} smooth={true} duration={500} offset={-70}>About</Link>
+            <a className={styles.Navbar__navLink}  href="#about">About</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <Link className={styles.Navbar__navLink}  activeClass="" to="work" spy={true} smooth={true} duration={500} offset={-70}>Work</Link>
+            <a className={styles.Navbar__navLink}  href="#work">Work</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <Link className={styles.Navbar__navLink}  activeClass="" to="contact" spy={true} smooth={true} duration={500} offset={-70}>Contact</Link>
+            <a className={styles.Navbar__navLink}  href="#contact">Contact</a>
           </li>
         </ul>
       </div>

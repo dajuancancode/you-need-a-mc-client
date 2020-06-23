@@ -1,17 +1,16 @@
 import React from "react"
 
 import styles from "./About.module.sass"
-import "../../../node_modules/video-react/dist/video-react.css"
 
 import LaWanda from "../../assets/Lawanda.jpg"
 
 
-const About = () => {
+const About = ({id}) => {
 
   const url = "https://res.cloudinary.com/dajuancancode/video/upload/v1588877303/you-need-a-mc/UNAMC_compressed.mp4"
 
   return (
-    <div className={styles.About}>
+    <div className={styles.About} id={id}>
       <h1 className={styles.About__title}>About Us</h1>
       <div className={styles.About__bioBlock}>
         <div className={styles.About__paragraphBlock}>

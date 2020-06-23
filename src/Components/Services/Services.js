@@ -9,7 +9,7 @@ import wedding from "../../assets/wedding.svg"
 import product from "../../assets/product.svg"
 import many from "../../assets/many_more.svg"
 
-const Services = () => {
+const Services = ({id}) => {
   const events = [
     {image: meeting, headding: "Meetings & Confrences", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
     {image: wedding, headding: "Weddings", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
@@ -18,7 +18,7 @@ const Services = () => {
   ]
 
   return (
-    <div className={styles.Services}>
+    <div className={styles.Services} id={id}>
       <h1 className={styles.Services__title}>Services</h1>
       <div className={styles.Services__cardsContainer}>
         {events && events.map((event, index) => <Card image={event.image} heading={event.headding} body={event.body} key={index}/>)}
