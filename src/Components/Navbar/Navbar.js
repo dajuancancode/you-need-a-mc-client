@@ -27,19 +27,19 @@ const Navabar = props => {
       <div className={styles.Navbar__navigation} id="navigation">
         <ul className={styles.Navbar__nav}>
         <li className={styles.Navbar__navItem}>
-            <a className={styles.Navbar__navLink} href="#home">Home</a>
+            <a className={styles.Navbar__navLink} onClick={handleClick} href="#home">Home</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <a className={styles.Navbar__navLink} href="#services">Services</a>
+            <a className={styles.Navbar__navLink} onClick={handleClick} href="#services">Services</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <a className={styles.Navbar__navLink}  href="#about">About</a>
+            <a className={styles.Navbar__navLink} onClick={handleClick} href="#about">About</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <a className={styles.Navbar__navLink}  href="#work">Work</a>
+            <a className={styles.Navbar__navLink} onClick={handleClick} href="#work">Work</a>
           </li>
           <li className={styles.Navbar__navItem}>
-            <a className={styles.Navbar__navLink}  href="#contact">Contact</a>
+            <a className={styles.Navbar__navLink} onClick={handleClick} href="#contact">Contact</a>
           </li>
         </ul>
       </div>
