@@ -12,7 +12,7 @@ const Navabar = props => {
 
   const handleClick = () => {
     const navigation = document.querySelector("#navigation")
-    navigation.style.visibility = !status ? "visible" : "hidden"
+    navigation.style.transform = !status ? "scale(1)" : "scale(0)"
     setStatus(!status)
   }
 

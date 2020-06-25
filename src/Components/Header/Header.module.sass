@@ -4,7 +4,7 @@
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
   column-gap: 10px
-  grid-template-rows: 20vh 30vh 35vh 10vh
+  grid-template-rows: 20vh 25vh 35vh 10Vh
 
   &__background
     background:  $primary-green
@@ -13,33 +13,18 @@
   &__content
     display: flex
     flex-direction: column
-    text-align: center
-    justify-self: center
-    align-self: center
+    justify-content: center
+    align-items: center
     grid-row: 2 / 3
     grid-column: 1 / -1
-  &__btnGroup
-    display: flex
-    justify-content: space-evenly
-  &__btn
-    border: 3px solid $accent-orange
-    border-radius: 5px
-    background: transparent
-    margin: 10px
-    cursor: pointer
-    flex-basis: 45%
-    height: 50px
-  &__btn a
-    color: #ffffff
-  &__btn--attn
-    background: $accent-orange
+    overflow: hidden
   &__span
     position: relative
     padding-bottom: 0.5rem
     &::after
       content: ""
       position: absolute
-      bottom: 14%
+      bottom: 0%
       left: 0%
       right: 0%
       height: 0.5rem
@@ -50,7 +35,7 @@
     font-size: calc(100% + 90%)
   &__info
     color: #fff 
-    padding: 2rem 0 1.5rem
+    padding: 2rem 0 0
   &__imgContainer
     height: 100%
     width: 100%

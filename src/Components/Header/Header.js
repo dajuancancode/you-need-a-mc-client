@@ -16,10 +16,6 @@ const Header = ({id}) => {
       <div className={styles.Header__content}>
         <h1 className={styles.Header__heading}>You Need <span className={styles.Header__span} id="spanText">A Skilled</span> MC</h1>
         <p className={styles.Header__info}>Allow us to make your event amazing</p>
-        <div className={styles.Header__btnGroup}>
-          <button className={[styles.Header__btn, styles["Header__btn--attn"]].join(" ")}><a href="#contact">Contact Us</a></button>
-          <button className={styles.Header__btn}><a href="#work">View Work</a></button>
-        </div>
       </div>
       <div className={styles.Header__imgContainer}>
         <img src={mic} alt="Microphone"  className={styles.Header__img}/>
