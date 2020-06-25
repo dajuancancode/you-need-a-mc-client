@@ -5,7 +5,7 @@
   justify-content: space-evenly
   align-items: center
   flex-wrap: wrap
-  grid-column: 1 / 5
+  grid-column: 1 / -1
   grid-row: 1 / 2
   &__logoContainer
     width: 150px
@@ -41,3 +41,13 @@
     font-size: 2rem
     &:hover
       border-bottom: 2px solid $accent-orange
+  @media ( min-width:  768px)
+    &__logoContainer
+      width: 200px
+    &__menuButton
+      display: none
+    &__navigation
+      visibility: visible
+      flex-basis: 0
+    
+
