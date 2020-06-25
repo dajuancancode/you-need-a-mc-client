@@ -8,8 +8,7 @@ const GalleryModal = ({isopen, onClick, name, src, picture}) => {
   return(
     <div isopen={isopen} className={styles.Modal} onClick={onClick} name={name}>
       <div className={styles.Modal__body}>
-        <a className={styles.Modal__close} href="/" onClick={onClick}><span className="far fa-times"></span></a>
-        <img src={src}  alt={picture}/>
+        <img src={src}  alt={picture} onClick={onClick} />   
         <p>Let us see if this will work, because I do not know, but I think it'll be interesting to see if it does lols</p>
       </div>
     </div>
@@ -46,8 +45,7 @@ const Gallery = () => {
     <div className={styles.Gallery}>
       {imgUrls && imgUrls.map((img, index) => (
         <div className={[styles.Gallery__card, `Gallery__card--${index}`].join(" ")} key={index}>
-          <img src={img} alt={`number ${index}`}  className={styles.Gallery__img}/>
-          <span className={[styles.Gallery__open, "far fa-expand-alt"].join(" ")} onClick={() => openModal(img)}></span>
+          <img src={img} alt={`number ${index}`}  className={styles.Gallery__img} onClick={() => openModal(img)}/>
         </div>
       ))}
       <GalleryModal isopen={modal} onClick={closeModal} src={url} picture={"Hello"} />
