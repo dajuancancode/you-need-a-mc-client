@@ -1,0 +1,91 @@
+@import "../../sass/main.sass"
+
+.Navbar
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+  grid-area: 1 / 1 / 2 / -1
+  &__logoContainer
+    width: 150px
+  &__logo
+    width: 100%
+  &__menuButton
+    padding: .04rem  1.2rem
+    font-size: 2rem
+    line-height: 1
+    background-color: transparent
+    border: 2px solid transparent
+    color: rgba(0,0,0,0.5)
+    background-color: $accent-orange
+    cursor: pointer
+    border-radius: .4rem
+    z-index: 2
+
+  &__menuIcon
+    font-size: 1.066rem
+  &__navigation
+    position: fixed
+    z-index: 1
+    top: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    background: rgba(0,0,0,0.8)
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-y: auto
+    transition: 0.5s
+    transform: scale(0)
+  &__nav
+    position: relative
+  &__navItem
+    position: relative
+    list-style: none
+    text-align: center
+    display: block
+  &__navLink
+    position: relative
+    text-decoration: none
+    font-size: 3.2rem
+    padding: 10px 10px
+    color: #fff
+    font-weight: 700
+    text-transform: uppercase
+    display: inline-block
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0%
+      left: 0
+      width: 100%
+      border-radius: 5px
+      height: 8px
+      background: $accent-orange
+      transform: translateY( -50%) scaleX(0)
+      transform-origin: right
+      transition: 0.5s transform
+  &__navLink:hover::after
+      transform: translateY( -50%) scaleX(1)
+      transform-origin: left
+      transition: 0.5s transform
+      
+  @media ( min-width:  768px)
+    &__logoContainer
+      width: 200px
+    &__menuButton
+      display: none
+    &__navigation
+      position: static
+      transform: scale(1)!important
+      background: transparent!important
+      width: auto
+    &__nav
+      display: flex
+    &__navItem
+    &__navLink
+      font-size: 1.8rem
+      &::after
+        height: 5px
+    

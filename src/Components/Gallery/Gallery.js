@@ -36,9 +36,6 @@ const Gallery = () => {
     'https://source.unsplash.com/t20pc32VbrU/800x600',
     'https://source.unsplash.com/pHANr-CpbYM/800x600',
     'https://source.unsplash.com/3PmwYw2uErY/800x600',
-    'https://source.unsplash.com/uOi3lg8fGl4/800x600',
-    'https://source.unsplash.com/CwkiN6_qpDI/800x600',
-    'https://source.unsplash.com/9O1oQ9SzQZQ/800x600'
   ];
 
   return (
