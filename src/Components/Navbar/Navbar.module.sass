@@ -5,8 +5,7 @@
   justify-content: space-evenly
   align-items: center
   flex-wrap: wrap
-  grid-column: 1 / -1
-  grid-row: 1 / 2
+  grid-area: 1 / 1 / 2 / -1
   &__logoContainer
     width: 150px
   &__logo
@@ -38,7 +37,7 @@
     color: #fff
     transition: all 250ms ease-in-out
     cursor: pointer
-    font-size: 2rem
+    font-size: calc(100%)
     &:hover
       border-bottom: 2px solid $accent-orange
   @media ( min-width:  768px)
