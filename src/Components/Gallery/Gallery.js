@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styles from "./Gallery.module.sass"
-import "./temp.sass"
 
 const GalleryModal = ({isopen, onClick, name, src, picture}) => {
   if(isopen === false) return null
@@ -30,6 +29,12 @@ const Gallery = () => {
   }
 
   let imgUrls = [
+    'https://source.unsplash.com/3Z70SDuYs5g/800x600',
+    'https://source.unsplash.com/01vFmYAOqQ0/800x600',
+    'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
+    'https://source.unsplash.com/t20pc32VbrU/800x600',
+    'https://source.unsplash.com/pHANr-CpbYM/800x600',
+    'https://source.unsplash.com/3PmwYw2uErY/800x600',
     'https://source.unsplash.com/3Z70SDuYs5g/800x600',
     'https://source.unsplash.com/01vFmYAOqQ0/800x600',
     'https://source.unsplash.com/2Bjq3A7rGn4/800x600',

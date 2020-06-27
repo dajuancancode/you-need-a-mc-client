@@ -37,9 +37,14 @@
   &__img
     width: 100%
     border-radius: 10px
+  &__subTitle
+    font-style: italic
+    width: 90%
+    margin: 3.5rem auto 2rem
   &__videoContainer
     width: 90%
     margin: 1.5rem auto
+    max-width: 910px
   &__video
     width: 100%
 
@@ -49,7 +54,14 @@
       justify-content: space-between
     &__paragraphBlock
       width: 47%
-    &__paragraphBlock > p
+    &__paragraphBlock > p, &__benefit
       font-size: 1.8rem
     &__imgContainer
       width: 47%
+      display: flex
+      justify-content: flex-end
+      max-width: 500px
+  @media ( min-width: $large)
+    &__paragraphBlock > p, &__benefit
+      font-size: 2rem
+    

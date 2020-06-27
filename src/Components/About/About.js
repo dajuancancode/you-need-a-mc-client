@@ -41,6 +41,7 @@ const About = ({id}) => {
           <img className={styles.About__img} src={LaWanda} alt="CEO Lawanda Will B Lawanda"/>
         </div>
       </div>
+      <h2 className={styles.About__subTitle}>Sizzle Reel</h2>
       <div className={styles.About__videoContainer}>
         <video controls className={styles.About__video} poster={LaWanda}>
           <source src={url} type="video/mp4"></source>

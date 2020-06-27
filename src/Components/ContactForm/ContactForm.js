@@ -62,27 +62,29 @@ const ContactForm = () => {
       }}
     >
       <Form className={styles.Form}>
-        <MyTextInput
-          classstyles={styles.Form__firstName}
-          label="First Name"
-          name="firstName"
-          type="text"
-          placeholder="John"
-        />
-        <MyTextInput
-          classstyles={styles.Form__lastName}
-          label="Last Name"
-          name="lastName"
-          type="text"
-          placeholder="Doe"
-        />
-        <MyTextInput
-          classstyles={styles.Form__emailAddress}
-          label="Email Address"
-          name="email"
-          type="email"
-          placeholder="John@youneedamc.com"
-        />
+        <div className={styles.Form__inputs}>
+          <MyTextInput
+            classstyles={styles.Form__firstName}
+            label="First Name"
+            name="firstName"
+            type="text"
+            placeholder="John"
+          />
+          <MyTextInput
+            classstyles={styles.Form__lastName}
+            label="Last Name"
+            name="lastName"
+            type="text"
+            placeholder="Doe"
+          />
+          <MyTextInput
+            classstyles={styles.Form__emailAddress}
+            label="Email Address"
+            name="email"
+            type="email"
+            placeholder="John@youneedamc.com"
+          />
+        </div>
         <MyTextArea
           classstyles={styles.Form__messageField}
           label="Send A Message"
