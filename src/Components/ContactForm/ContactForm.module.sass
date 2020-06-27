@@ -32,6 +32,9 @@
     color: #ffffff
     outline: none
 
+  &__firstName input::placeholder, &__lastName input::placeholder, &__emailAddress input::placeholder
+    color: #ffffff
+
   &__firstName, &__lastName, &__emailAddress, &__messageField
     display: flex
     flex-direction: column;
@@ -41,7 +44,7 @@
     height: 50px
     background: transparent
     border: 3px solid #ffffff
-    margin-bottom: 2rem
+    margin: 2rem 0
     border-radius: 6px
     @include font-canada-type-gibson($size: 1.6rem, $color: #fff, $weight: 500)
   &__error
