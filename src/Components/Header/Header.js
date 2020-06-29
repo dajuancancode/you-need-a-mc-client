@@ -3,11 +3,9 @@ import styles from "./Header.module.sass"
 
 import Navbar from "../Navbar/Navbar"
 
-import mic from "../../assets/Mic.svg"
-
-
-
 const Header = ({id}) => {
+
+  const mic = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460172/you-need-a-mc/Mic.svg"
 
   return (
     <header className={styles.Header} id={id}>

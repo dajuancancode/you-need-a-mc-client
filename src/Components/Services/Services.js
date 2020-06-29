@@ -4,12 +4,13 @@ import Card from "../Card/Card"
 
 import styles from "./Services.module.sass"
 
-import meeting from "../../assets/meeting.svg"
-import wedding from "../../assets/wedding.svg"
-import product from "../../assets/product.svg"
-import many from "../../assets/many_more.svg"
-
 const Services = ({id}) => {
+
+  const meeting = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/meeting.svg"
+  const wedding = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460169/you-need-a-mc/wedding.svg"
+  const product = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460167/you-need-a-mc/product.svg"
+  const many = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/many_more.svg"
+
   const events = [
     {image: meeting, headding: "Meetings & Confrences", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
     {image: wedding, headding: "Weddings", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},

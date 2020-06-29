@@ -2,13 +2,11 @@ import React from "react"
 
 import styles from "./About.module.sass"
 
-import LaWanda from "../../assets/Lawanda.jpg"
-
 
 const About = ({id}) => {
 
-  const url = "https://res.cloudinary.com/dajuancancode/video/upload/v1588877303/you-need-a-mc/UNAMC_compressed.mp4"
-
+  const videoUrl = "https://res.cloudinary.com/dajuancancode/video/upload/v1588877303/you-need-a-mc/UNAMC_compressed.mp4"
+  const imageURL = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/Lawanda.jpg"
   return (
     <div className={styles.About} id={id}>
       <h1 className={styles.About__title}>About Us</h1>
@@ -38,13 +36,13 @@ const About = ({id}) => {
           </p>
         </div>
         <div className={styles.About__imgContainer}>
-          <img className={styles.About__img} src={LaWanda} alt="CEO Lawanda Will B Lawanda"/>
+          <img className={styles.About__img} src={imageURL} alt="CEO Lawanda Will B Lawanda"/>
         </div>
       </div>
       <h2 className={styles.About__subTitle}>Sizzle Reel</h2>
       <div className={styles.About__videoContainer}>
-        <video controls className={styles.About__video} poster={LaWanda}>
-          <source src={url} type="video/mp4"></source>
+        <video controls className={styles.About__video} poster={imageURL}>
+          <source src={videoUrl} type="video/mp4"></source>
           Sorry, your browser doesn't support embedded videos.
         </video>
       </div>

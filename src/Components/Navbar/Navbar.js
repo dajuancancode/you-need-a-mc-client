@@ -3,10 +3,9 @@ import Burger from '@animated-burgers/burger-squeeze'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 import styles from './Navbar.module.sass';
 
-import logo from "../../assets/logo.svg";
-
 const Navabar = props => {
 
+  const logo = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/logo.svg";
 
   const [status, setStatus] = useState(false);
 
