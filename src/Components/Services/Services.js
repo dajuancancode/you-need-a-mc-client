@@ -1,29 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Card from "../Card/Card"
 
 import styles from "./Services.module.sass"
 
+import ServiceModal from "../ServiceModal/ServiceModal"
+
+import events from "../../util/services.js"
+
 const Services = ({id}) => {
 
-  const meeting = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/meeting.svg"
-  const wedding = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460169/you-need-a-mc/wedding.svg"
-  const product = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460167/you-need-a-mc/product.svg"
-  const many = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/many_more.svg"
+  const [modalVisibility, setModalVisibility] = useState(false)
+  const [image, setImage] = useState("")
+  const [title, settitle] = useState("")
+  const [body, setBody] = useState("")
 
-  const events = [
-    {image: meeting, headding: "Meetings & Confrences", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
-    {image: wedding, headding: "Weddings", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
-    {image: product, headding: "Book & Product Launches", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
-    {image: many, headding: "Many More", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit fermentum ligula sit amet consectetur."},
-  ]
+  
+  const showModal= (image, title, body) => {
+    setModalVisibility(true)
+    setImage(image)
+    settitle(title)
+    setBody(body)
+  }
+
+  const hideModal = ( ) => {
+    setModalVisibility(false)
+    setImage("")
+    settitle("")
+    setBody("")
+  }
 
   return (
     <div className={styles.Services} id={id}>
       <h1 className={styles.Services__title}>Services</h1>
       <div className={styles.Services__cardsContainer}>
-        {events && events.map((event, index) => <Card image={event.image} heading={event.headding} body={event.body} key={index}/>)}
+        {events && events.map((event, index) => {
+          return (
+            <div className={styles.Services__cardContainer}>
+              <Card image={event.image} title={event.title} body={event.body.split(" ").slice(0, 15).join(" ")+"..."} key={index}/>
+              <button className={styles.Services__button} onClick={() => showModal(event.image, event.title, event.body)}>Read More</button>
+            </div>
+          )
+        })}
       </div>
+      <ServiceModal img={image} title={title} body={body} show={modalVisibility} handleClose={hideModal} />
     </div>
   )
 }
