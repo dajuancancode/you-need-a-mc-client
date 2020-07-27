@@ -4,7 +4,7 @@ import "./ServiceModal.sass"
 
 const ServiceModal = ( {handleClose, show, title, img, body} ) => {
   const showHideClassName = show ? "Modal Modal__showModal" : "Modal Modal__hideModal"
-  const brBody = <p className="Modal__contentBody">{body.split('\n\n').map((item, idx) => {return (<span key={idx} className="Modal__span">{item}<br /><br /></span>)})}</p>
+  const brBody = <p className="Modal__contentBody">{body && body.split('\n\n').map((item, idx) => {return (<span key={idx} className="Modal__span">{item}<br /><br /></span>)})}</p>
   const ulBody = <div className="Modal__contentBody">
       <p>You Need A VERSITILE MC! Here is a list of the many ways you can use our services and we hope you will!</p>
       <ul className="Modal__list">
@@ -25,7 +25,7 @@ const ServiceModal = ( {handleClose, show, title, img, body} ) => {
         <li className="Modal__listItem">Voice-Over Work</li>
       </ul>
   </div>
-  const modalBody = body.includes("VERSITILE") ? ulBody : brBody
+  const modalBody = body && body.includes("VERSITILE") ? ulBody : brBody
 
   return (
     <div className={showHideClassName} onClick={handleClose}>

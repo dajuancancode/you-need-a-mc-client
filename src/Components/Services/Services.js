@@ -10,24 +10,20 @@ import events from "../../util/services.js"
 
 const Services = ({id}) => {
 
-  const [modalVisibility, setModalVisibility] = useState(false)
-  const [image, setImage] = useState("")
-  const [title, settitle] = useState("")
-  const [body, setBody] = useState("")
+  const [modal, setModal] = useState({})
 
   
   const showModal= (image, title, body) => {
-    setModalVisibility(true)
-    setImage(image)
-    settitle(title)
-    setBody(body)
+    setModal({
+      image: image,
+      title: title,
+      body: body,
+      visibility: true
+    })
   }
 
   const hideModal = ( ) => {
-    setModalVisibility(false)
-    setImage("")
-    settitle("")
-    setBody("")
+    setModal({})
   }
 
   return (
@@ -43,7 +39,7 @@ const Services = ({id}) => {
           )
         })}
       </div>
-      <ServiceModal img={image} title={title} body={body} show={modalVisibility} handleClose={hideModal} />
+      <ServiceModal img={modal && modal.image} title={modal && modal.title} body={modal && modal.body} show={modal && modal.visibility} handleClose={hideModal} />
     </div>
   )
 }
