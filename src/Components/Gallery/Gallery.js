@@ -1,58 +1,77 @@
-import React, { useState } from 'react'
-import styles from "./Gallery.module.sass"
+import React, { useState } from "react";
+import styles from "./Gallery.module.sass";
 
-const GalleryModal = ({isopen, onClick, name, src, picture}) => {
-  if(isopen === false) return null
+const GalleryModal = ({ isopen, onClick, name, src, picture }) => {
+  if (isopen === false) return null;
 
-  return(
+  return (
     <div isopen={isopen} className={styles.Modal} onClick={onClick} name={name}>
       <div className={styles.Modal__body}>
-        <img src={src}  alt={picture} onClick={onClick} />   
-        <p>Let us see if this will work, because I do not know, but I think it'll be interesting to see if it does lols</p>
+        <img src={src} alt={picture} onClick={onClick} />
+        <p>
+          Let us see if this will work, because I do not know, but I think it'll
+          be interesting to see if it does lols
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Gallery = () => {
-  const [modal, showModal] = useState(false)
-  const [url, setUrl] = useState("")
+  const [modal, showModal] = useState(false);
+  const [url, setUrl] = useState("");
 
-  const openModal = url => {
-    showModal(true)
-    setUrl(url)
-  }
+  const openModal = (url) => {
+    showModal(true);
+    setUrl(url);
+  };
 
   const closeModal = () => {
-    showModal(false)
-    setUrl("")
-  }
+    showModal(false);
+    setUrl("");
+  };
 
   let imgUrls = [
-    'https://source.unsplash.com/3Z70SDuYs5g/800x600',
-    'https://source.unsplash.com/01vFmYAOqQ0/800x600',
-    'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
-    'https://source.unsplash.com/t20pc32VbrU/800x600',
-    'https://source.unsplash.com/pHANr-CpbYM/800x600',
-    'https://source.unsplash.com/3PmwYw2uErY/800x600',
-    'https://source.unsplash.com/3Z70SDuYs5g/800x600',
-    'https://source.unsplash.com/01vFmYAOqQ0/800x600',
-    'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
-    'https://source.unsplash.com/t20pc32VbrU/800x600',
-    'https://source.unsplash.com/pHANr-CpbYM/800x600',
-    'https://source.unsplash.com/3PmwYw2uErY/800x600',
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event1.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event11.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event2.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event4.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event12.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event5.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event6.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event7.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event3.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event8.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event9.png",
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1595952601/you-need-a-mc/Event10.png",
   ];
 
   return (
     <div className={styles.Gallery}>
-      {imgUrls && imgUrls.map((img, index) => (
-        <div className={[styles.Gallery__card, `Gallery__card--${index}`].join(" ")} key={index}>
-          <img src={img} alt={`number ${index}`}  className={styles.Gallery__img} onClick={() => openModal(img)}/>
-        </div>
-      ))}
-      <GalleryModal isopen={modal} onClick={closeModal} src={url} picture={"Hello"} />
+      {imgUrls &&
+        imgUrls.map((img, index) => (
+          <div
+            className={[styles.Gallery__card, `Gallery__card--${index}`].join(
+              " "
+            )}
+            key={index}
+          >
+            <img
+              src={img}
+              alt={`number ${index}`}
+              className={styles.Gallery__img}
+              onClick={() => openModal(img)}
+            />
+          </div>
+        ))}
+      <GalleryModal
+        isopen={modal}
+        onClick={closeModal}
+        src={url}
+        picture={"Hello"}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
