@@ -1,16 +1,16 @@
 .Gallery
   display: flex
   flex-wrap: wrap
-  justify-content: space-evenly
-  width: 100%
+  justify-content: space-between
+  width: 90vw
   margin: 0 auto
   margin-bottom: 2rem
 
   &__card
     position: relative
     overflow: hidden
-    max-height: 200px
-    flex-basis: 40%
+    width: 43vw
+    height: 43vw
     margin-bottom: 2rem
 
   &__img
@@ -60,9 +60,11 @@
 @media ( min-width:  768px)
   .Gallery
     &__card
-      flex-basis: 30%
+      width: 28vw
+      height: 28vw
 
 @media ( min-width:  1024px)
   .Gallery
     &__card
-      flex-basis: 23%
+      width: 20vw
+      height: 20vw

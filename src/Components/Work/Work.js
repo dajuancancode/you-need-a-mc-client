@@ -1,28 +1,37 @@
-import React from 'react'
+import React from "react";
 
-import Gallery from "../Gallery/Gallery"
+import Gallery from "../Gallery/Gallery";
 
-import styles from "./Work.module.sass"
+import styles from "./Work.module.sass";
 
-
-const Work = ({id}) => {
-  const videoUrl = "https://res.cloudinary.com/dajuancancode/video/upload/v1588877303/you-need-a-mc/UNAMC_compressed.mp4"
-  const imageURL = "https://res.cloudinary.com/dajuancancode/image/upload/v1593460166/you-need-a-mc/Lawanda.jpg"
-
-  return(
+const Work = ({ id }) => {
+  return (
     <div className={styles.Work} id={id}>
       <h1 className={styles.Work__title}>Work</h1>
       <div className={styles.Work__container}>
         <div className={styles.Work__videoContainer}>
-          <video controls className={styles.Work__video} poster={imageURL}>
-            <source src={videoUrl} type="video/mp4"></source>
-            Sorry, your browser doesn't support embedded videos.
-          </video>
+          <iframe
+            title="Artists Showcase"
+            className={styles.Work__video}
+            src="https://www.youtube.com/embed/XxA6v3dyIAQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <iframe
+            title="Panel"
+            className={styles.Work__video}
+            src="https://www.youtube.com/embed/Jmx8X33ZOvE"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <Gallery />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

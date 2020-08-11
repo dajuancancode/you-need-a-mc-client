@@ -8,8 +8,21 @@
     width: 90%
     margin: 3.5rem auto 2rem
   &__videoContainer
-    width: 100%
-    margin: 1.5rem auto
-    max-width: 910px
+    width: 90vw
+    height: 102vw
+    margin: 1.5rem 0
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @media ( min-width:  768px)
+      flex-direction: row
+      flex-wrap: nowrap
+      height: auto
   &__video
-    width: 100%
+    width: 90vw
+    height: calc(90vw / 1.8)
+    @media ( min-width:  768px)
+      width: 44vw
+      height: calc(44vw / 1.8)

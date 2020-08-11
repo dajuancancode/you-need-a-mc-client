@@ -1,6 +1,5 @@
 @import "../../sass/main.sass"
 
-
 .Form
   display: flex
   flex-direction: column
@@ -23,8 +22,10 @@
     margin-bottom: 1rem
     color: #ffffff
     outline: none
-  
+
   &__messageField textarea
+    padding-left: 1rem
+    padding-top: 1rem
     height: 225px
     background: transparent
     border: 3px solid #ffffff
@@ -37,10 +38,11 @@
 
   &__firstName, &__lastName, &__emailAddress, &__messageField
     display: flex
-    flex-direction: column;
+    flex-direction: column
     justify-content: space-evenly
 
   &__button
+    cursor: pointer
     height: 50px
     background: transparent
     border: 3px solid #ffffff

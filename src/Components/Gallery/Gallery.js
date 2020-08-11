@@ -8,10 +8,6 @@ const GalleryModal = ({ isopen, onClick, name, src, picture }) => {
     <div isopen={isopen} className={styles.Modal} onClick={onClick} name={name}>
       <div className={styles.Modal__body}>
         <img src={src} alt={picture} onClick={onClick} />
-        <p>
-          Let us see if this will work, because I do not know, but I think it'll
-          be interesting to see if it does lols
-        </p>
       </div>
     </div>
   );
