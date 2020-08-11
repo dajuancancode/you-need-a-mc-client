@@ -4,7 +4,8 @@ import styles from "./About.module.sass";
 
 const About = ({ id }) => {
   const imageURL =
-    "https://res.cloudinary.com/dajuancancode/image/upload/v1597179115/you-need-a-mc/Lawanda.png";
+    "https://res.cloudinary.com/dajuancancode/image/upload/v1597179613/you-need-a-mc/Lawanda.png";
+
   return (
     <div className={styles.About} id={id}>
       <h1 className={styles.About__title}>About Us</h1>
