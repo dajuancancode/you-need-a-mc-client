@@ -7,7 +7,7 @@ import styles from "./Work.module.sass";
 const Work = ({ id }) => {
   return (
     <div className={styles.Work} id={id}>
-      <h1 className={styles.Work__title}>Work</h1>
+      <h1 className={styles.Work__title}>Past Events</h1>
       <div className={styles.Work__container}>
         <div className={styles.Work__videoContainer}>
           <iframe
