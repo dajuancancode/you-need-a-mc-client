@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Card.module.sass";
 
 const Card = ({ image, title, body, handleClick }) => {
-  const summary = body.split(" ").slice(0, 15).join(" ") + "...";
+  const summary = body.split(" ").slice(0, 10).join(" ") + "...";
 
   return (
     <div className={styles.Card}>

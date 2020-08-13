@@ -1,12 +1,29 @@
-import React from 'react'
+import React from "react";
 
-import "./ServiceModal.sass"
+import "./ServiceModal.sass";
 
-const ServiceModal = ( {handleClose, show, title, img, body} ) => {
-  const showHideClassName = show ? "Modal Modal__showModal" : "Modal Modal__hideModal"
-  const brBody = <p className="Modal__contentBody">{body && body.split('\n\n').map((item, idx) => {return (<span key={idx} className="Modal__span">{item}<br /><br /></span>)})}</p>
-  const ulBody = <div className="Modal__contentBody">
-      <p>You Need A VERSITILE MC! Here is a list of the many ways you can use our services and we hope you will!</p>
+const ServiceModal = ({ handleClose, show, title, img, body }) => {
+  const showHideClassName = show
+    ? "Modal Modal__showModal"
+    : "Modal Modal__hideModal";
+  const brBody = (
+    <p className="Modal__contentBody">
+      {body &&
+        body.split("\n\n").map((item, idx) => {
+          return (
+            <span key={idx} className="Modal__span">
+              {item}
+            </span>
+          );
+        })}
+    </p>
+  );
+  const ulBody = (
+    <div className="Modal__contentBody">
+      <p>
+        You Need A VERSATILE MC! Here is a list of the many ways you can use our
+        services and we hope you will!
+      </p>
       <ul className="Modal__list">
         <li className="Modal__listItem">Awards Shows</li>
         <li className="Modal__listItem">Backstage Announcing</li>
@@ -24,27 +41,26 @@ const ServiceModal = ( {handleClose, show, title, img, body} ) => {
         <li className="Modal__listItem">Virtual Meetings</li>
         <li className="Modal__listItem">Voice-Over Work</li>
       </ul>
-  </div>
-  const modalBody = body && body.includes("VERSITILE") ? ulBody : brBody
+    </div>
+  );
+  const modalBody = body && body.includes("VERSITILE") ? ulBody : brBody;
 
   return (
     <div className={showHideClassName} onClick={handleClose}>
       <div className="Modal__body">
-        <button className="Modal__close" onClick={handleClose}>
-          <i class="far fa-times"></i>
-        </button>
+        <div className="Modal__header">
+          <h1 className="Modal__title">{title}</h1>
+          <button className="Modal__close" onClick={handleClose}>
+            <i className="far fa-times Modal__close" onClick={handleClose}></i>
+          </button>
+        </div>
         <div className="Modal__imageContaner">
-          <img src={img} alt={title} className="Modal__image"/>
+          <img src={img} alt={title} className="Modal__image" />
         </div>
-        <div className="Modal__content">
-          <h1 className="Modal__title">
-            {title}
-          </h1>
-          {modalBody}
-        </div>
+        <div className="Modal__content">{modalBody}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ServiceModal
+export default ServiceModal;

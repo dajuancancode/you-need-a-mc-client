@@ -49,7 +49,7 @@ const About = ({ id }) => {
           />
         </div>
       </div>
-      <h2 className={styles.About__subTitle}>Sizzle Reel</h2>
+      <h1 className={styles.About__subTitle}>Sizzle Reel</h1>
       <div className={styles.About__videoContainer}>
         <iframe
           title="Sizzle Reel"
