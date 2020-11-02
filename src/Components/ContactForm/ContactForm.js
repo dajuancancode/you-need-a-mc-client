@@ -49,15 +49,12 @@ const ContactForm = () => {
           .max(500, "Must be 500 characters or less")
           .required("Required"),
       })}
-      onSubmit={(values, { setSubmitting }) => {
-        axios
-          .post("https://you-need-a-mc.herokuapp.com/", values)
-          .then(function (response) {
-            alert("Message Sent");
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+      onSubmit={async(values, { setSubmitting }) => {
+        try {
+          await axios.post("https://you-need-a-mc.herokuapp.com/", values)
+        } catch(e) {
+          console.log(e.message)
+        }
         setSubmitting(false);
       }}
     >
